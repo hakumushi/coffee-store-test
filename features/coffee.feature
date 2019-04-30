@@ -1,8 +1,8 @@
 Feature: Coffee
 
     Scenario Outline: Coffee behave
-        When I register a coffee with fields "<fields>" and values "<values>"
-        Then I verify that status code is <statusCode>
+        When a user registers a coffee with fields "<fields>" and values "<values>"
+        Then the status code returned is <statusCode>
 
     Examples: Happy path
     | fields | values | statusCode |

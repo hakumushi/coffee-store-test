@@ -1,11 +1,11 @@
 const { When, Then, setDefaultTimeout, } = require("cucumber");
-const { expect,} = require("chai");
+const { expect, } = require("chai");
 const { CoffeeApi, } = require("../apis/coffeeApi");
-const { resolve,} = require("promise");
+const { resolve, } = require("promise");
 
 setDefaultTimeout(10 * 1000);
 
-When("I register a coffee with fields {string} and values {string}", async function(fields, values) {
+When("a user registers a coffee with fields {string} and values {string}", async function (fields, values) {
     let coffee = {
         "name": "Cosi",
         "intensity": 4,
@@ -27,6 +27,6 @@ When("I register a coffee with fields {string} and values {string}", async funct
     this.setTo("coffee", json);
 });
 
-Then("I verify that status code is {int}", function (statusCode) {
+Then("the status code returned is {int}", function (statusCode) {
     expect(this.context.coffee.status).to.eql(statusCode);
 });

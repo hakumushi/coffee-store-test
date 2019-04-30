@@ -9,7 +9,7 @@ mongoose.connect("mongodb://" + process.env.DATABASE_USER + ":" + process.env.DA
 let Coffee = mongoose.model("Coffees", new mongoose.Schema({}));
 
 BeforeAll(async function () {
-    await Coffee.deleteMany( {_id: { $ne: null, }, }, () => {});
+    await Coffee.deleteMany({ _id: { $ne: null, }, }, () => { });
 });
 
 AfterAll(function () {
