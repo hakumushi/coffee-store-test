@@ -8,10 +8,10 @@ mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://" + process.env.DATABASE_USER + ":" + process.env.DATABASE_PASSWORD + process.env.DATABASE_HOST, { useNewUrlParser: true, });
 let Coffee = mongoose.model("Coffees", new mongoose.Schema({}));
 
-BeforeAll(async function () {
+BeforeAll(async () => {
     await Coffee.deleteMany({ _id: { $ne: null, }, }, () => { });
 });
 
-AfterAll(function () {
+AfterAll( () => {
     mongoose.connection.close();
 });
