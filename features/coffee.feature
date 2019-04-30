@@ -1,6 +1,6 @@
 Feature: Coffee
 
-    Scenario Outline: Criando doação com sucesso
+    Scenario Outline: Coffee behave
         When I register a coffee with fields "<fields>" and values "<values>"
         Then I verify that status code is <statusCode>
 

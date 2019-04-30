@@ -4,7 +4,7 @@ require("dotenv").config();
 class CustomWorld {
     constructor() {
         this.context = {};
-        this.url = process.env.URL;
+        this.url = process.env.BACKEND_URL + ":" + process.env.BACKEND_PORT + "/";
     }
 
     setTo(key, value) {
